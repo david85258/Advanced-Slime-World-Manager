@@ -71,6 +71,9 @@ public class ClassModifier {
     }
 
     public static Object injectCustomWorlds() {
+        if (customLoader == null) {
+            return null;
+        }
         return customLoader.injectCustomWorlds();
     }
 }

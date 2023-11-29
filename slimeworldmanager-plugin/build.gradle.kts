@@ -10,6 +10,7 @@ dependencies {
     implementation(project(":slimeworldmanager-nms-v119", "reobf"))
     implementation(project(":slimeworldmanager-nms-v119-1", "reobf"))
     implementation(project(":slimeworldmanager-nms-v119-2", "reobf"))
+    implementation(project(":slimeworldmanager-nms-v120-1", "reobf"))
     implementation(project(":slimeworldmanager-classmodifierapi"))
 
     implementation("com.flowpowered:flow-nbt:2.0.2")
@@ -41,7 +42,7 @@ tasks {
     }
 
     runServer {
-        minecraftVersion("1.19.2")
+        minecraftVersion("1.20.1")
         jvmArgs("-javaagent:" + project(":slimeworldmanager-classmodifier").tasks.named<AbstractArchiveTask>("shadowJar").flatMap { shadow -> shadow.archiveFile }.get().asFile.toPath())
     }
 }
